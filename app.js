@@ -15,7 +15,7 @@ function addBookToLibrary (book) {
   return myLibrary;
 }
 
-let books = document.getElementById('books');
+let books = document.querySelector('.books');
 let str = '<ul>'
 
 myLibrary.forEach(book => {
@@ -28,6 +28,13 @@ books.innerHTML = str;
 
 let addBook = document.querySelector('.addBook');
 //console.log('ADD BOOK: ', addBook)
-addBook.addEventListener('click', (e) => {
-  console.log('button clicked!!!')
+addBook.addEventListener('click', () => {
+  let form = document.getElementById('bookInfo');
+  if (form.style.display === 'none') {
+    form.style.display = 'block';
+  } else {
+    //hides the form
+    form.style.display = 'none';
+  }
 })
+

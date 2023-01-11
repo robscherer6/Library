@@ -10,20 +10,28 @@
 <body>
   <h1>Library</h1>
 
-  <div id="books"></div>
+  <div class="books"></div>
 
-  <form action="bookInfo">
-    <label for="title">Title:</label>
-    <input type="text">
-    <label for="author">Author:</label>
-    <input type="text">
-    <label for="pages">Pages:</label>
-    <input type="text">
-    <label for="read">Have you read it?</label>
-    <input type="text">
+  <form id="bookInfo">
+    <div>
+      <label for="title">Title:</label>
+      <input type="text">
+    </div>
+    <div>
+      <label for="author">Author:</label>
+      <input type="text">
+    </div>
+    <div>
+      <label for="pages">Pages:</label>
+      <input type="text">
+    </div>
+    <div>
+      <label for="read">Have you read it?</label>
+      <input type="text">
+    </div>
   </form>
 
-  <button class="addBook">NEW BOOK</button>
+  <button class="addBook">ADD NEW BOOK</button>
 
   <script src="app.js"></script>
 </body>
