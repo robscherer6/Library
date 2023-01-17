@@ -12,13 +12,17 @@ body {
 .container {
   display: grid;
   grid-template-columns: 25% 75%;
-
 }
 
 .sidebar {
   background-color: #0ea5e9;
   height: 100vh;
   color: white;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
 }
 
 .main {
