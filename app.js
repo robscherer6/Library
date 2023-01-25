@@ -28,4 +28,11 @@ function display (bookshelf) {
   })
 }
 
+
 display(myLibrary)
+
+
+let btn = document.querySelector('.addBook');
+btn.addEventListener('click', function () {
+  console.log('JELLO!!')
+})

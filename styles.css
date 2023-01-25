@@ -7,3 +7,9 @@
   margin: 5px;
   padding: 5px;
 }
+
+.form {
+  width: 20vw;
+  border: 1px solid blue;
+  margin-top: 50px;
+}
