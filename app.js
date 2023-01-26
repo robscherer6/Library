@@ -13,7 +13,8 @@ console.log(newBook.info());
 
 let myLibrary = ['The Hobbit', 'Lord of The Rings', 'Harry Potter'];
 
-function addBook (book) {
+function addBook (Title, Author, Pages, Read) {
+  let book = new Book(Title, Author, Pages, Read);
   myLibrary.push(book);
 }
 
@@ -34,5 +35,5 @@ display(myLibrary)
 
 let btn = document.querySelector('.addBook');
 btn.addEventListener('click', function () {
-  console.log('JELLO!!')
+
 })
