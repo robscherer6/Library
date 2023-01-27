@@ -1,7 +1,11 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: .1fr;
+  text-align: center;
+  height: 100vh;
   background-color: lightgrey;
+  border-style: groove;
 }
 
 .card {
@@ -17,7 +21,8 @@
   align-items: center; */
   width: 20vw;
   border: 1px solid blue;
-  margin-top: 50px;
+  margin: 5px;
+
 }
 
 button {
