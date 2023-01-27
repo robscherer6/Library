@@ -8,8 +8,8 @@ function Book (title, author, pages, read) {
   }
 }
 
-let newBook = new Book('The Hobbit', 'J.R.R. Tolkien', 295, 'not read yet');
-console.log(newBook.info());
+// let newBook = new Book('The Hobbit', 'J.R.R. Tolkien', 295, 'not read yet');
+// console.log(newBook.info());
 
 let myLibrary = ['The Hobbit', 'Lord of The Rings', 'Harry Potter'];
 
@@ -22,12 +22,19 @@ let books = document.querySelector('.books');
 
 function display (bookshelf) {
   bookshelf.forEach((book) => {
-    let newBook = document.createElement('div');
-    newBook.innerText = book;
-    newBook.classList.add('book');
-    books.appendChild(newBook);
+    let card = document.createElement('div');
+    card.innerText = book;
+    card.classList.add('card');
+    books.appendChild(card);
+    for (let key in myLibrary) {
+      console.log(`${key}: ${myLibrary[key]}`);
+      const para = document.createElement('p');
+      para.textContent = (`${key}: ${myLibrary[key]}`);
+      card.appendChild(para);
+    }
   })
 }
+
 
 
 display(myLibrary)
