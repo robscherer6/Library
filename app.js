@@ -38,6 +38,8 @@ addBook('Lord of The Rings', 'J.R.R. Tolkien', '495 Pages', 'Not Read Yet');
 addBook('The Hobbit', 'J.R.R. Tolkien', '295 Pages', 'Read');
 addBook('Bourne Legacy', 'Robert Ludlum', '464 Pages', 'Not Read Yet');
 addBook('Harry Potter', 'J.K. Rowling', '395 Pages', 'Read');
+addBook('Harry Potter', 'J.K. Rowling', '395 Pages', 'Read');
+addBook('Harry Potter', 'J.K. Rowling', '395 Pages', 'Read');
 
 console.log('myLibrary array contents: ', myLibrary)
 

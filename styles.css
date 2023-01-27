@@ -1,3 +1,7 @@
+body {
+  font-family: sans-serif;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -8,10 +12,27 @@
   border-style: groove;
 }
 
+.form-heading {
+  border: groove;
+}
+
 .card {
-  border: 1px solid black;
+  background-color: white;
+  color: black;
   width: 25vw;
   margin: 5px;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-column: 2 / 3;
+  background-color: #bccbde;
+  border-style: groove;
+  gap: 15px;
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-right: 15px;
 }
 
 .form {
@@ -23,8 +44,4 @@
   border: 1px solid blue;
   margin: 5px;
 
-}
-
-button {
-  margin: 5px;
 }
