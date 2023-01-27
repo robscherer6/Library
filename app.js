@@ -46,7 +46,13 @@ console.log('myLibrary array contents: ', myLibrary)
 display()
 
 
-let btn = document.querySelector('.addBook');
-btn.addEventListener('click', function () {
+let btn = document.querySelector('.submit-button');
 
-})
+btn.addEventListener('click', function () {
+  let form = document.querySelector('.form');
+  if (form.style.display === 'none') {
+    form.style.display = 'block';
+  } else {
+    form.style.display = 'none';
+  }
+});

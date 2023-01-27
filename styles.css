@@ -17,8 +17,11 @@ body {
 }
 
 .card {
+  /* display: grid; */
   background-color: white;
   color: black;
+  /* text-align: center; */
+  /* height: 400px; */
   width: 25vw;
   margin: 5px;
 }
@@ -35,13 +38,14 @@ body {
   margin-right: 15px;
 }
 
-.form {
+#add-book {
   /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; */
+
   width: 20vw;
   border: 1px solid blue;
   margin: 5px;
-
 }
+
