@@ -34,25 +34,22 @@ function display () {
   })
 }
 
-addBook('Lord of The Rings', 'J.R.R. Tolkien', '495 Pages', 'Not Read Yet');
-addBook('The Hobbit', 'J.R.R. Tolkien', '295 Pages', 'Read');
-addBook('Bourne Legacy', 'Robert Ludlum', '464 Pages', 'Not Read Yet');
-addBook('Harry Potter', 'J.K. Rowling', '395 Pages', 'Read');
-addBook('Harry Potter', 'J.K. Rowling', '395 Pages', 'Read');
-addBook('Harry Potter', 'J.K. Rowling', '395 Pages', 'Read');
+// addBook('Lord of The Rings', 'J.R.R. Tolkien', '495 Pages', 'Not Read Yet');
+// addBook('The Hobbit', 'J.R.R. Tolkien', '295 Pages', 'Read');
+// addBook('Bourne Legacy', 'Robert Ludlum', '464 Pages', 'Not Read Yet');
+// addBook('Harry Potter', 'J.K. Rowling', '395 Pages', 'Read');
+// addBook('Harry Potter', 'J.K. Rowling', '395 Pages', 'Read');
+// addBook('Harry Potter', 'J.K. Rowling', '395 Pages', 'Read');
 
 console.log('myLibrary array contents: ', myLibrary)
 
 display()
 
 
-let btn = document.querySelector('.submit-button');
+let addBookButton = document.querySelector('.add-book-button');
+addBookButton.addEventListener('click', displayForm);
 
-btn.addEventListener('click', function () {
-  let form = document.querySelector('.form');
-  if (form.style.display === 'none') {
-    form.style.display = 'block';
-  } else {
-    form.style.display = 'none';
-  }
-});
+function displayForm () {
+  document.getElementById('add-book-form').style.display = '';
+}
+
