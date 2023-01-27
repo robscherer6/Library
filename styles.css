@@ -1,11 +1,19 @@
-.book {
+/* .card {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 15vw;
   border: 1px solid black;
   border-radius: 5px;
   margin: 5px;
   padding: 5px;
+} */
+
+.card {
+  border: 1px solid black;
+  width: 25vw;
+  margin: 5px;
 }
 
 .form {
