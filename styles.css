@@ -1,14 +1,8 @@
-/* .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 15vw;
-  border: 1px solid black;
-  border-radius: 5px;
-  margin: 5px;
-  padding: 5px;
-} */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: lightgrey;
+}
 
 .card {
   border: 1px solid black;
