@@ -16,11 +16,20 @@ let myLibrary = [];
 function addBook (Title, Author, Pages, Read) {
   let book = new Book(Title, Author, Pages, Read);
   myLibrary.push(book);
+  displayBooks();
 }
 
 
-function display () {
+function displayBooks () {
   let books = document.querySelector('.books');
+
+  //need to remove books currently displayed to prevent duplicates
+  let removeDivs = document.querySelectorAll('.card');
+  console.log('current books in library: ', removeDivs);
+  for (var i = 0; i < removeDivs.length; i++) {
+    removeDivs[i].remove();
+  }
+
   myLibrary.forEach((book) => {
     let card = document.createElement('div');
     card.classList.add('card');
@@ -43,13 +52,35 @@ function display () {
 
 console.log('myLibrary array contents: ', myLibrary)
 
-display()
-
 
 let addBookButton = document.querySelector('.add-book-button');
 addBookButton.addEventListener('click', displayForm);
 
-function displayForm () {
+function displayForm() {
   document.getElementById('add-book-form').style.display = '';
 }
+
+let submitButton = document.querySelector('.submit-button');
+submitButton.addEventListener('click', intakeFormData);
+
+function intakeFormData() {
+  let Title = document.getElementById('Title').value;
+  let Author = document.getElementById('Author').value;
+  let Pages = document.getElementById('Pages').value;
+  let Read = document.getElementById('Read').value;
+
+  //if no book info in form, return
+  if((Title === '') || (Author === '') || (Pages === '') || (Read === '')) {
+    return;
+  }
+
+  //add book from form to library
+  addBook(Title, Author, Pages, Read);
+
+  //reset form after submitting book (built in)
+  document.getElementById('add-book').reset();
+
+}
+
+
 
