@@ -31,6 +31,11 @@ function displayBooks () {
   }
 
   myLibrary.forEach((book) => {
+
+    let removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove Book';
+    // books.appendChild(removeButton);
+
     let card = document.createElement('div');
     card.classList.add('card');
     books.appendChild(card);
@@ -40,9 +45,12 @@ function displayBooks () {
       const para = document.createElement('p');
       para.textContent = (`${key}: ${book[key]}`);
       card.appendChild(para);
+      card.appendChild(removeButton)
     }
   })
 }
+
+
 
 // addBook('Lord of The Rings', 'J.R.R. Tolkien', '495 Pages', 'Not Read Yet');
 // addBook('The Hobbit', 'J.R.R. Tolkien', '295 Pages', 'Read');
