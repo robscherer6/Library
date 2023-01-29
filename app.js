@@ -34,6 +34,7 @@ function displayBooks () {
     let card = document.createElement('div');
     card.classList.add('card');
     books.appendChild(card);
+    //para = paragraph aka content of card
     for (let key in book) {
       console.log(`${key}: ${book[key]}`);
       const para = document.createElement('p');
@@ -80,6 +81,13 @@ function intakeFormData() {
   //reset form after submitting book (built in)
   document.getElementById('add-book').reset();
 
+}
+
+let resetFormButton = document.querySelector('.reset-button');
+resetFormButton.addEventListener('click', resetForm);
+
+function resetForm() {
+  document.getElementById('add-book').reset();
 }
 
 
