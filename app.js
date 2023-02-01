@@ -30,15 +30,30 @@ function displayBooks () {
     removeDivs[i].remove();
   }
 
+  let index = 0;
   myLibrary.forEach((book) => {
-
-    let removeButton = document.createElement('button');
-    removeButton.textContent = 'Remove Book';
-    // books.appendChild(removeButton);
 
     let card = document.createElement('div');
     card.classList.add('card');
     books.appendChild(card);
+
+    let removeButton = document.createElement('button');
+    removeButton.classList.add('remove-book-button');
+    removeButton.textContent = 'Remove Book';
+
+    //adding linkedArray prop with value of index to removeButton (using dataset attribute)
+    removeButton.dataset.linkedArray = index;
+    index++;
+    console.log('show dataset link to array: ', removeButton.dataset.linkedArray);
+    card.appendChild(removeButton);
+
+    removeButton.addEventListener('click', removeBook);
+
+    function removeBook() {
+      console.log('click')
+    }
+
+
     //para = paragraph aka content of card
     for (let key in book) {
       console.log(`${key}: ${book[key]}`);
