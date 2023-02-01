@@ -50,7 +50,13 @@ function displayBooks () {
     removeButton.addEventListener('click', removeBook);
 
     function removeBook() {
-      console.log('click')
+      //remove book at index** dataset linkedArray prop
+      let bookToRemove = removeButton.dataset.linkedArray;
+      console.log('bookToRemove: ', bookToRemove)
+      myLibrary.splice((bookToRemove), 1);
+      //need to also remove div/node from dom
+      card.remove();
+      displayBooks();
     }
 
 
