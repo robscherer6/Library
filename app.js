@@ -53,7 +53,7 @@ function displayBooks () {
       //remove book at index** dataset linkedArray prop
       let bookToRemove = removeButton.dataset.linkedArray;
       console.log('bookToRemove: ', bookToRemove)
-      myLibrary.splice((bookToRemove), 1);
+      myLibrary.splice(parseInt(bookToRemove), 1);
       //need to also remove div/node from dom
       card.remove();
       displayBooks();
