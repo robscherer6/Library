@@ -64,4 +64,9 @@ body {
   box-shadow: 5px 5px 5px black;
 }
 
+.remove-book-button {
+  background-color: red;
+  color: white;
+  font-size: 15px;
+}
 

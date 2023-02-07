@@ -59,6 +59,22 @@ function displayBooks () {
       displayBooks();
     }
 
+    //creating 'READ' button for each book (needs to toggle)
+    let readButton = document.createElement('button');
+    readButton.classList.add('.read-button');
+    readButton.textContent = 'Read'
+    card.appendChild(readButton);
+
+    readButton.addEventListener('click', readToggle);
+
+    function readToggle () {
+      if (readButton.textContent === 'Read') {
+        readButton.textContent = 'Not Read';
+      } else {
+        readButton.textContent = 'Read';
+      }
+    }
+
 
     //para = paragraph aka content of card
     for (let key in book) {
