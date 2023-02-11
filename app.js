@@ -1,3 +1,5 @@
+let myLibrary = [];
+
 function Book (Title, Author, Pages, Read) {
   this.Title = Title;
   this.Author = Author;
@@ -11,7 +13,6 @@ function Book (Title, Author, Pages, Read) {
 // let newBook = new Book('The Hobbit', 'J.R.R. Tolkien', 295, 'not read yet');
 // console.log(newBook.info());
 
-let myLibrary = [];
 
 function addBook (Title, Author, Pages, Read) {
   let book = new Book(Title, Author, Pages, Read);
@@ -43,8 +44,8 @@ function displayBooks () {
 
     //adding linkedArray prop with value of index to removeButton (using dataset attribute)
     removeButton.dataset.linkedArray = index;
-    index++;
-    console.log('show dataset link to array: ', removeButton.dataset.linkedArray);
+    //index++;
+    //console.log('show dataset link to array: ', removeButton.dataset.linkedArray);
     card.appendChild(removeButton);
 
     removeButton.addEventListener('click', removeBook);
@@ -52,7 +53,7 @@ function displayBooks () {
     function removeBook() {
       //remove book at index** dataset linkedArray prop
       let bookToRemove = removeButton.dataset.linkedArray;
-      console.log('bookToRemove: ', bookToRemove)
+      //console.log('bookToRemove: ', bookToRemove)
       myLibrary.splice(parseInt(bookToRemove), 1);
       //need to also remove div/node from dom
       card.remove();
@@ -61,18 +62,35 @@ function displayBooks () {
 
     //creating 'READ' button for each book (needs to toggle)
     let readButton = document.createElement('button');
-    readButton.classList.add('.read-button');
-    readButton.textContent = 'Read'
+    readButton.classList.add('read-button');
+    readButton.textContent = 'Toggle Read Status'
+
+
+    readButton.dataset.linkedArray = index;
+    //console.log('show me dataset link to array: ', readButton.dataset.linkedArray)
     card.appendChild(readButton);
 
-    readButton.addEventListener('click', readToggle);
 
-    function readToggle () {
-      if (readButton.textContent === 'Read') {
-        readButton.textContent = 'Not Read';
-      } else {
-        readButton.textContent = 'Read';
-      }
+    readButton.addEventListener('click', toggleReadStatus);
+
+    function toggleReadStatus () {
+      //going to be index value of book
+      let bookToToggle = readButton.dataset.linkedArray;
+      Book.prototype = Object.create(Book.prototype);
+      let toggleBook = new Book();
+      // console.log('toggleBook: ', toggleBook.Read);
+      //console.log('bookToToggle: ', parseInt(bookToToggle));
+      console.log('bookToToggle initial value: ', myLibrary[parseInt(bookToToggle)].Read);
+
+      //go to that book in library at index, get read status prop value
+      // if ((myLibrary[parseInt(bookToToggle)].Read) === 'Yes') {
+      //   toggleBook.Read = 'No';
+      //   myLibrary[parseInt(bookToToggle)].Read == toggleBook.Read;
+      // } else if ((myLibrary[parseInt(bookToToggle)].Read) === 'No') {
+      //   toggleBook.Read = 'Yes';
+      //   myLibrary[parseInt(bookToToggle)].Read == toggleBook.Read;
+      // }
+      displayBooks();
     }
 
 
@@ -84,6 +102,7 @@ function displayBooks () {
       card.appendChild(para);
       card.appendChild(removeButton)
     }
+    index++;
   })
 }
 
