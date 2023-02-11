@@ -18,7 +18,7 @@ body {
 
 .card {
   /* display: grid; */
-  background-color: white;
+  background-color: cyan;
   color: black;
   /* text-align: center; */
   /* height: 400px; */
@@ -68,5 +68,13 @@ body {
   background-color: red;
   color: white;
   font-size: 15px;
+}
+
+.read-button {
+  display: grid;
+  font-weight: 900;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
 }
 
