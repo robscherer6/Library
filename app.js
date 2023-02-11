@@ -44,7 +44,7 @@ function displayBooks () {
 
     //adding linkedArray prop with value of index to removeButton (using dataset attribute)
     removeButton.dataset.linkedArray = index;
-    //index++;
+
     //console.log('show dataset link to array: ', removeButton.dataset.linkedArray);
     card.appendChild(removeButton);
 
@@ -83,13 +83,13 @@ function displayBooks () {
       console.log('bookToToggle initial value: ', myLibrary[parseInt(bookToToggle)].Read);
 
       //go to that book in library at index, get read status prop value
-      // if ((myLibrary[parseInt(bookToToggle)].Read) === 'Yes') {
-      //   toggleBook.Read = 'No';
-      //   myLibrary[parseInt(bookToToggle)].Read == toggleBook.Read;
-      // } else if ((myLibrary[parseInt(bookToToggle)].Read) === 'No') {
-      //   toggleBook.Read = 'Yes';
-      //   myLibrary[parseInt(bookToToggle)].Read == toggleBook.Read;
-      // }
+      if ((myLibrary[parseInt(bookToToggle)].Read) === 'Yes') {
+        toggleBook.Read = 'No';
+        myLibrary[parseInt(bookToToggle)].Read = toggleBook.Read;
+      } else if ((myLibrary[parseInt(bookToToggle)].Read) === 'No') {
+        toggleBook.Read = 'Yes';
+        myLibrary[parseInt(bookToToggle)].Read = toggleBook.Read;
+      }
       displayBooks();
     }
 
@@ -115,7 +115,7 @@ function displayBooks () {
 // addBook('Harry Potter', 'J.K. Rowling', '395 Pages', 'Read');
 // addBook('Harry Potter', 'J.K. Rowling', '395 Pages', 'Read');
 
-console.log('myLibrary array contents: ', myLibrary)
+//console.log('myLibrary array contents: ', myLibrary)
 
 
 let addBookButton = document.querySelector('.add-book-button');
